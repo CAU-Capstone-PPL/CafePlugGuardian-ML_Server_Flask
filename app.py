@@ -5,7 +5,7 @@ import json
 import glob
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-
+import os
 
 
 
@@ -70,7 +70,8 @@ def predict2():
 
       # JSON 데이터를 활용하는 로직
          print('Received JSON data:')
-         model = torch.load(r"C:\Users\USER\Desktop\3grade\Capstone\realData\_GRU_PSJ (pleaseLast).pt",map_location=torch.device('cpu'))
+         model_path=os.path.join('_GRU_PSJ (pleaseLast).pt')
+         model = torch.load(model_path,map_location=torch.device('cpu'))
          model.eval()
       # 예시: JSON 데이터를 딕셔너리로 활용
 
