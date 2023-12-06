@@ -95,9 +95,12 @@ def predict2():
          if result_count[1] >= 360:
             print("isPermited:True")
             return jsonify({'isPermited': 'True'})
-         else:
+         elif result_count[0] >= 360:
             print("isPermited:False")
             return jsonify({'isPermited': 'False'})
+         else :
+            print("isPermited:New Item")
+            return jsonify({'isPermited:New Item\n'+input_json})
 
    except Exception as e:
       # 오류 메시지 출력
