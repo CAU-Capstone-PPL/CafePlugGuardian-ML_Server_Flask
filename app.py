@@ -47,20 +47,6 @@ class GRUModel(nn.Module):
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/test2',methods=['POST'])
-def test2():
-    if request.method == 'POST':
-      # JSON 데이터를 가져옴
-      json_data = request.json
-      print('Received JSON data:', json_data)
-      # 여기에서 필요한 로직을 수행
-      # 응답
-      return jsonify({'message': 'POST request successful','data':json_data})
-
-@app.route('/test', methods=['GET'])
-def test():
-   return jsonify({"test":"성공"}),200
-
 @app.route('/predict2', methods=['POST'])
 def predict2():
    try:
@@ -106,45 +92,6 @@ def predict2():
       # 오류 메시지 출력
       print(f'Error processing request: {str(e)}')
       return jsonify({'error': str(e)}), 500
-
-
-
-@app.route('/predict', methods=['POST'])
-def predict():
-   if request.method=='POST':
-
-      JSON_dict = {}
-
-      for JSON in glob.glob(r"C:\Users\USER\Desktop\3grade\Capstone\realData\세준아이폰충전기.json"):
-
-         with open(JSON, "r",encoding="utf-8") as st_json:
-            JSON_dict[JSON] = json.load(st_json)
-
-      model = torch.load(r"C:\Users\USER\Desktop\3grade\Capstone\realData\_GRU_PSJ (pleaseLast).pt",map_location=torch.device('cpu'))
-      model.eval()
-
-      for key, value in JSON_dict.items():
-
-         result_count = np.array([0, 0])
-         x_input = np.array(value['filter current'])
-         x_normalized = (x_input - min(x_input)) / (max(x_input) - min(x_input))
-
-         for i in range(500 - 33 + 1):
-
-            x_test = torch.Tensor(x_normalized[i: i + 33]).unsqueeze(0).unsqueeze(1).to(DEVICE)
-            result = np.argmax(model(x_test).cpu().detach().numpy(), axis=1)
-
-            for fin in result:
-               result_count[fin] += 1
-
-         print(key, result_count)
-
-         if (result_count[1] >= 360):
-            print("'isPermited':'True'")
-            return jsonify({'isPermited':'True'})
-         else:
-            print("'isPermited':'False'")
-            return jsonify({'isPermited':'False'})
 
 if __name__ == '__main__':
    app.run('0.0.0.0', port=5000, debug=True)
