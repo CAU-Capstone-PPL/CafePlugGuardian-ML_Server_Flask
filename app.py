@@ -76,10 +76,10 @@ def predict2():
 
          print('Prediction result:', result_count)
 
-         if result_count[1] >= 360:
+         if result_count[1] >= 380:
             print("isPermited:True")
             return jsonify({'isPermitted':'True'})
-         elif result_count[0] >= 360:
+         elif result_count[0] >= 380:
             print("isPermited:False")
             return jsonify({'isPermitted':'False'})
          else :
