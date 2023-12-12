@@ -54,7 +54,7 @@ def predict2():
 
       # JSON 데이터를 활용하는 로직
          print('Received JSON data:')
-         model_path=os.path.join('_GRU_PSJ (pleaseLast).pt')
+         model_path=os.path.join('CafePlugGuardian_ML_Model.pt')
          model = torch.load(model_path,map_location=torch.device('cpu'))
          model.eval()
       # 예시: JSON 데이터를 딕셔너리로 활용
