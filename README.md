@@ -31,3 +31,18 @@ Please note that we will not be accepting contributions for CafePlugGuardian, as
 CafePlugGuardian-ML_Server_FLask is a Server for active Machine Learning Model. Our Machine Learning Model is wrote by Pytorch. So we have to make Python Server for active our model. 
 It was wrote by python version 3.10.6. And use Flask 3.0.0.
 
+### How to run a flask server
+Grab a git clone from the desired location and run it by typing python app.py in the terminal.
+
+### How to categorize the data you receive.
+When the data is sent in JSON from the backend server, it fetches the training model stored in the same location as the server for classification.
+
+### How to modify criteria
+![image](https://github.com/CAU-Capstone-PPL/CafePlugGuardian-ML_Server_Flask/assets/106421292/1ff4d904-d10d-44f1-b280-8c7f4017ade7)
+You can arbitrarily modify the disallow criteria in the above code. The range can be modified to any value between 468 and 0.
+
+### Prediction result
+The prediction result is in the form of [x,468-x], and one data feature is moved to the class with the higher similarity by comparing the similarity between the disallowed data and the allowed data. A total of 468 data features are moved and output in the form above. After classification, it returns the results to the backend server.
+
+#### Example
+![image](https://github.com/CAU-Capstone-PPL/CafePlugGuardian-ML_Server_Flask/assets/106421292/6f0c1738-3698-4dd4-adac-934500f1ed08)
