@@ -26,7 +26,8 @@ Please note that we will not be accepting contributions for CafePlugGuardian, as
 * [CafePlugGuardian-ML_Server_Flask](https://github.com/CAU-Capstone-PPL/CafePlugGuardian-ML_Server_Flask)
     * AI server - flask
 
-# CafePlugGuardian-ML_Server_Flask
-ML Flask Server
-# CafePlugGuardian-ML_Server_FLask
+
+## CafePlugGuardian-ML_Server_FLask
 CafePlugGuardian-ML_Server_FLask is a Server for active Machine Learning Model. Our Machine Learning Model is wrote by Pytorch. So we have to make Python Server for active our model. 
+It was wrote by python version 3.10.6. And use Flask 3.0.0.
+
