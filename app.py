@@ -76,7 +76,7 @@ def predict2():
 
          print('Prediction result:', result_count)
 
-         if result_count[1] >= 380:
+         if result_count[1] >= 380: #380은 468의 약 81%
             print("isPermited:True")
             return jsonify({'isPermitted':'True'})
          elif result_count[0] >= 380:

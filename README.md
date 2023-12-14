@@ -31,6 +31,13 @@ Please note that we will not be accepting contributions for CafePlugGuardian, as
 CafePlugGuardian-ML_Server_FLask is a Server for active Machine Learning Model. Our Machine Learning Model is wrote by Pytorch. So we have to make Python Server for active our model. 
 It was wrote by python version 3.10.6. And use Flask 3.0.0.
 
+### Requirements to run or modifiy server
+* Python version more than 3.10.6
+* Flask 3.0.0
+* Ide which you can edit python code.
+* Torch version 2.1.1
+* Open your port 5000 or change port num which you will use
+
 ### How to run a flask server
 Grab a git clone from the desired location and run it by typing python app.py in the terminal.
 
@@ -46,3 +53,6 @@ The prediction result is in the form of [x,468-x], and one data feature is moved
 
 #### Example
 ![image](https://github.com/CAU-Capstone-PPL/CafePlugGuardian-ML_Server_Flask/assets/106421292/6f0c1738-3698-4dd4-adac-934500f1ed08)
+
+### How to chage your own end point
+Line 48 initially end point is '/predict2'. You can change your own end point such as '/predict', '/AI' and others.
