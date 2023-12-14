@@ -45,7 +45,7 @@ Grab a git clone from the desired location and run it by typing python app.py in
 When the data is sent in JSON from the backend server, it fetches the training model stored in the same location as the server for classification.
 
 ### How to modify criteria
-![image](https://github.com/CAU-Capstone-PPL/CafePlugGuardian-ML_Server_Flask/assets/106421292/1ff4d904-d10d-44f1-b280-8c7f4017ade7)
+<br>![image](https://github.com/CAU-Capstone-PPL/CafePlugGuardian-ML_Server_Flask/assets/106421292/1ff4d904-d10d-44f1-b280-8c7f4017ade7)<br>
 You can arbitrarily modify the disallow criteria in the above code. The range can be modified to any value between 468 and 0.
 
 ### Prediction result
