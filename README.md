@@ -56,3 +56,6 @@ The prediction result is in the form of [x,468-x], and one data feature is moved
 
 ### How to chage your own end point
 Line 48 initially end point is '/predict2'. You can change your own end point such as '/predict', '/AI' and others.
+
+## License
+This program is licensed under MIT
