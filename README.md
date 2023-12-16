@@ -37,9 +37,13 @@ It was wrote by python version 3.10.6. And use Flask 3.0.0.
 * Framwork which you can edit python code.
 * Torch version 2.1.1
 * Open your port 5000 or change port num which you will use
+* Need Machine Learning Model(same as model in CafePlugGuardian-Ml github repository)
 
 ### How to run a flask server
 Grab a git clone from the desired location and run it by typing python app.py in the terminal.
+
+### How to run a model in this server
+It is recommended that you save your machine learning model to the same file location as your server files, but if you have saved it elsewhere, simply replace the address with a relative address to that location, and replace the full name of your model (including the extension) with "CafePlugGuardian_ML_Model.pt" to use your model. The model must be in the same format as the one in the github repository CafePlugGuaridan-ML for it to work without errors. But If you want to customize your model, you can do so by changing the GRU model declaration and data entry parts of the server code. 
 
 ### How to categorize the data you receive.
 When the data is sent in JSON from the backend server, it fetches the training model stored in the same location as the server for classification.
