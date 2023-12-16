@@ -27,14 +27,14 @@ Please note that we will not be accepting contributions for CafePlugGuardian, as
     * AI server - flask
 
 
-## CafePlugGuardian-ML_Server_FLask
+## Introduction
 CafePlugGuardian-ML_Server_FLask is a Server for active Machine Learning Model. Our Machine Learning Model is wrote by Pytorch. So we have to make Python Server for active our model. 
 It was wrote by python version 3.10.6. And use Flask 3.0.0.
 
 ### Requirements to run or modifiy server
 * Python version more than 3.10.6
 * Flask 3.0.0
-* Ide which you can edit python code.
+* Framwork which you can edit python code.
 * Torch version 2.1.1
 * Open your port 5000 or change port num which you will use
 
@@ -45,7 +45,7 @@ Grab a git clone from the desired location and run it by typing python app.py in
 When the data is sent in JSON from the backend server, it fetches the training model stored in the same location as the server for classification.
 
 ### How to modify criteria
-![image](https://github.com/CAU-Capstone-PPL/CafePlugGuardian-ML_Server_Flask/assets/106421292/1ff4d904-d10d-44f1-b280-8c7f4017ade7)
+![image](https://github.com/CAU-Capstone-PPL/CafePlugGuardian-ML_Server_Flask/assets/106421292/1ff4d904-d10d-44f1-b280-8c7f4017ade7)<br>
 You can arbitrarily modify the disallow criteria in the above code. The range can be modified to any value between 468 and 0.
 
 ### Prediction result
