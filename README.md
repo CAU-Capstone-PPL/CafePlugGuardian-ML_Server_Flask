@@ -37,7 +37,7 @@ It was wrote by python version 3.10.6. And use Flask 3.0.0.
 * Framwork which you can edit python code.
 * Torch version 2.1.1
 * Open your port 5000 or change port num which you will use
-* Need Machine Learning Model(same as model in CafePlugGuardian-Ml github repository)
+* Need Machine Learning Model(same as model in github repository CafePlugGuardian-Ml)
 
 ### How to run a flask server
 Grab a git clone from the desired location and run it by typing python app.py in the terminal.
